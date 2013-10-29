@@ -5,10 +5,10 @@ function makeContactRowClickable() {
     if(newUrl.charAt(newUrl.length) != "/") {
       newUrl = newUrl + "/";
     }
-    newUrl = newUrl + $(this).data("contact-guid")
+    newUrl = newUrl + $(this).data("contact-guid");
     window.location.href = newUrl;
   });
-};
+}
 
 
 
@@ -19,16 +19,16 @@ function sortTable() {
 
 
 $(document).ready(function() {
-	toSort = []
+	toSort = [];
 	data = $('.last_name');
 	for (var i = 0; i < data.length; i++) {
 		toSort.push($(data[i]).text());
 	sorted = toSort.sort();
 	}
 	tbl = $('tbody');
-    	makeContactRowClickable();
+  makeContactRowClickable();
     $('th').on('click', function() {
-    	alert('work');
+      alert('work');
     });
 });
 
