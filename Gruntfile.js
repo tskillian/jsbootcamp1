@@ -13,15 +13,20 @@ module.exports = function(grunt) {
         ]
       }
     },
-    clean: ["./bower_components/"]
+    clean: {
+      build: {
+        src: ["./bower_components"]
+      }
+    }
   });
 
 
   // Load JS Hint
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   // Default tasks
-  grunt.registerTask('default', ['jshint', 'clean']);
+  grunt.registerTask('default', ['jshint', 'copy', 'clean']);
 
 };
