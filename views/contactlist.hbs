@@ -10,36 +10,37 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="font-awesome-4.0.1/css/font-awesome.min.css">
 
     <!-- Application Styles and Scripts -->
     <link rel="stylesheet" href="/jsbootcamp.css">
     <script src="/contactlist.js"></script>
     <script>
-      $(document).ready(function() {
-        makeContactRowClickable();
-      });
+
     </script>
-    <header>Contact List</header>
+    <header><i class="fa fa-user"></i><span>Contact List</span></header>
+
   </head>
 
   <body>
-    <table class="table table-hover">
+    <table id='table' class="table table-hover">
       <thead>
         <tr>
-          <th>Last Name</th>
-          <th>First Name</th>
-          <th>Nickname</th>
+          <th id='last_name_header'>Last Name</th>
+          <th id='first_name_header'>First Name</th>
+          <th id='nickname'>Nickname</th>
           <th>Company</th>
         </tr>
       <thead>
 
       <tbody>
+        
         {{#each contacts}}
-          <tr data-contact-guid="{{guid}}">
-            <td>{{lastName}}</td>
-            <td>{{firstName}}</td>
-            <td>{{nickname}}</td>
-            <td>{{company}}</td>
+          <tr id={{lastName}}{{firstName}} data-contact-guid="{{guid}}">
+            <td class='last_name'>{{lastName}}</td>
+            <td class='first_name'>{{firstName}}</td>
+            <td class='nickname'>{{nickname}}</td>
+            <td class='company'>{{company}}</td>
           </tr>
         {{/each}}
       </tbody>

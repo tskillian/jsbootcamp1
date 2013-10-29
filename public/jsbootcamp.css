@@ -1,3 +1,8 @@
 body {
   padding: 1em 1.5em 1em 1.5em;
 }
+header {
+	background-image: url(wet_snow.png);
+	font-size: 20;
+	
+}

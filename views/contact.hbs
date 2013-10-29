@@ -4,7 +4,7 @@
     <title>Code Fellows Contact Manager</title>
 
     <!-- Bring In jQuery -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../bower_components/jquery/jquery.js"></script>
 
     <!-- Bring In Bootstrap -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
@@ -13,6 +13,7 @@
 
     <!-- Application Styles and Scripts -->
     <link rel="stylesheet" href="/jsbootcamp.css">
+    <script src="../public/contactlist.js"></script>
   </head>
 
   <body>
@@ -21,12 +22,12 @@
         {{#with contact}}
           <div class="form-group">
             <label for="firstName">First Name</label>
-            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" value="{{firstName}}"/>
+            <input required type="text" type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" value="{{firstName}}"/>
           </div>
 
           <div class="form-group">
             <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" value="{{lastName}}"/>
+            <input required type="text" type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" value="{{lastName}}"/>
           </div>
 
           <div class="form-group">
@@ -36,12 +37,12 @@
 
           <div class="form-group">
             <label for="company">Company</label>
-            <input type="text" class="form-control" id="company" name="company" placeholder="Company" value="{{company}}"/>
+            <input required type="text" type="text" class="form-control" id="company" name="company" placeholder="Company" value="{{company}}"/>
           </div>
 
           <div class="form-group">
             <label for="email">Email Addr</label>
-            <input type="text" class="form-control" id="email" name="email" placeholder="Email Addrress" value="{{email}}"/>
+            <input required type="text" type="text" class="form-control" id="email" name="email" placeholder="Email Addrress" value="{{email}}"/>
           </div>
         {{/with}}
 
