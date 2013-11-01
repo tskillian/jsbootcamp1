@@ -17,6 +17,9 @@ module.exports = function(grunt) {
       build: {
         src: ["./bower_components"]
       }
+    },
+    mocha_phantomjs: {
+      all: ['test/TestRunner.html']
     }
   });
 
@@ -25,8 +28,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-mocha-phantomjs');
+  grunt.loadNpmTasks('grunt-bower-install-task');
 
   // Default tasks
-  grunt.registerTask('default', ['jshint', 'copy']);
+  grunt.registerTask('default', ['jshint','bower_install']);
+  grunt.registerTask('test', ['mocha_phantomjs']);
 
 };

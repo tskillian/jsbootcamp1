@@ -17,6 +17,8 @@
   ],
   "dependencies": {
     "jquery": "~2.0.3",
-    "bootstrap": "~3.0.0"
+    "bootstrap": "~3.0.0",
+    "mocha": "~1.13.0",
+    "chai": "~1.8.1"
   }
 }
