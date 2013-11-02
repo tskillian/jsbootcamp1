@@ -7,13 +7,15 @@
     <script src="/bower_components/jquery/jquery.js"></script>
 
     <!-- Bring In Bootstrap -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
     <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <link rel="stylesheet" href="font-awesome-4.0.1/css/font-awesome.min.css">
 
     <!-- Application Styles and Scripts -->
     <link rel="stylesheet" href="/jsbootcamp.css">
+    <script src="/bower_components/chart.js/chart.js"></script>
+    <script src="/test_chart.js"></script>
 
   </head>
 
@@ -22,5 +24,6 @@
   {{#each contacts}}
   <div>{{firstName}}</div>
   {{/each}}
+  <canvas id="myChart" width="400" height="400"></canvas>
   </body>
   </html>
