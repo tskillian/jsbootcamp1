@@ -96,7 +96,7 @@ app.get("/contacts/:guid", function(req, res) {
 });
 
 app.get("/messing", function(req, res) {
-  res.render("contactlist", {contacts: db});
+  res.render("messing", {contacts: db});
 });
 
 app.post("/contacts/:guid", function(req, res) {
