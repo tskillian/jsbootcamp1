@@ -25,7 +25,7 @@ var data = {
 			data : [28,48,40,19,96,27,100]
 		}
 	]
-}
+};
 new Chart(ctx).Line(data);
 
 Line.defaults = {
@@ -110,7 +110,7 @@ Line.defaults = {
 	//Function - Fires when the animation is complete
 	onAnimationComplete : null
 	
-}
+};
 
 
 });

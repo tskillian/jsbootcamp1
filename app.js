@@ -111,7 +111,7 @@ app.post("/new", function(req, res) {
 });
   db.push(formValues);
   res.redirect("/contacts");
-})
+});
 
 app.post("/contacts/:guid", function(req, res) {
   var guid = req.param("guid"),

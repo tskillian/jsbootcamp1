@@ -25,6 +25,7 @@
     "mocha": "*",
     "chai": "*",
     "grunt-mocha-phantomjs": "~0.3.0",
-    "grunt-bower-install-task": "0.0.2"
+    "grunt-bower-install-task": "0.0.2",
+    "grunt-contrib-watch": "~0.5.3"
   }
 }

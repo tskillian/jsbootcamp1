@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
-      myFiles: ['app.js', './public/contactlist.js']
+      myFiles: ['*.js', 'public/*.js']
     },
     copy: {
       main: {
@@ -20,16 +20,21 @@ module.exports = function(grunt) {
     },
     mocha_phantomjs: {
       all: ['test/TestRunner.html']
+    },
+    watch: {
+      files: ['**/*.js'],
+      tasks: ['jshint']
     }
   });
 
 
-  // Load JS Hint
+  // Load tasks
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-mocha-phantomjs');
   grunt.loadNpmTasks('grunt-bower-install-task');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default tasks
   grunt.registerTask('default', ['jshint','bower_install']);
