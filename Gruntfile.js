@@ -22,8 +22,11 @@ module.exports = function(grunt) {
       all: ['test/TestRunner.html']
     },
     watch: {
-      files: ['**/*.js'],
-      tasks: ['jshint']
+      options: {
+        livereload: true,
+      },
+      files: ['*.js', 'public/*.js'],
+      tasks: ['jshint'],
     }
   });
 
