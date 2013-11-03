@@ -14,6 +14,7 @@
 
     <!-- Application Styles and Scripts -->
     <link rel="stylesheet" href="/jsbootcamp.css">
+    <script src="new_contacts.js"></script>
   </head>
 
   <body>
@@ -21,7 +22,7 @@
       <form method="POST" class="form-horizontal" role="form">
           <div class="form-group">
             <label for="firstName">First Name</label>
-            <input required type="text" type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name"/>
+            <input autofocus="true" required type="text" type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name"/>
           </div>
 
           <div class="form-group">
@@ -45,7 +46,9 @@
           </div>
 
         <button type="submit" class="btn btn-default">Submit</button>
+        <button type="button" class="btn btn-default" id="reset_button">Reset Fields</button>
       </form>
+
     </div>
   </body>
 </html>

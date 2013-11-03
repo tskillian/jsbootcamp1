@@ -105,6 +105,10 @@ app.get("/messing", function(req, res) {
 
 app.post("/new", function(req, res) {
   var formValues = _.pick(req.body, "firstName", "lastName", "nickname", "company", "email");
+  formValues.guid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+    return v.toString(16);
+});
   db.push(formValues);
   res.redirect("/contacts");
 })
