@@ -95,9 +95,19 @@ app.get("/contacts/:guid", function(req, res) {
   }
 });
 
+app.get("/new", function(req, res) {
+  res.render("newcontact");
+});
+
 app.get("/messing", function(req, res) {
   res.render("messing", {contacts: db});
 });
+
+app.post("/new", function(req, res) {
+  var formValues = _.pick(req.body, "firstName", "lastName", "nickname", "company", "email");
+  db.push(formValues);
+  res.redirect("/contacts");
+})
 
 app.post("/contacts/:guid", function(req, res) {
   var guid = req.param("guid"),
